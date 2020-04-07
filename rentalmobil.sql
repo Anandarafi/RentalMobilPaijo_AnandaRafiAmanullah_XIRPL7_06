@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2020 at 01:10 AM
+-- Generation Time: Apr 07, 2020 at 08:13 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -171,7 +171,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id`, `nama_petugas`, `telp`, `username`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Ananda Rafi Amanullah', '082231954774', 'anndrf_', '$2y$10$qPqicltS5fsQCGCEa42IpuyquT0xVNTFeCbhhNlBBtuglahuhOlM6', 'admin', NULL, NULL, NULL);
+(1, 'Ananda Rafi Amanullah', '082231954774', 'anndrf_', '$2y$10$qPqicltS5fsQCGCEa42IpuyquT0xVNTFeCbhhNlBBtuglahuhOlM6', 'admin', NULL, NULL, NULL),
+(2, 'PAIJO', '082152415211', 'paijo1', '$2y$10$5KXH9nerrOFPMpeWzJ77O.SFs1YVjFeiCPJ3kbJAXwMJo5yZCgbJm', 'ADMIN', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -254,7 +255,7 @@ ALTER TABLE `peminjaman`
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

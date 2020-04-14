@@ -91,7 +91,7 @@ class MobilController extends Controller
     {
         if(Auth::user()->level=='admin'){
         $mobil  =mobil::all();
-        $mobil  = mobil::count();
+        $mobil1 = mobil::count();
         if($mobil){
             return Response()->json(['JUMLAH DATA'=>$mobil1,'DATA'=>$mobil,'status'=>true]);
         }

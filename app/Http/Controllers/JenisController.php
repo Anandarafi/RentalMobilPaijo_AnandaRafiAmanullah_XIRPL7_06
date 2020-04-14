@@ -76,10 +76,10 @@ class JenisController extends Controller
         if(Auth::user()->level=='admin'){
         $jenis=jenis::where('id_jenis',$id)->delete();
         if($jenis){
-            return Response()->json(['status'=>true,'message'=>'DATA SUCCESSFULLY CHANGED']);
+            return Response()->json(['status'=>true,'message'=>'DATA SUCCESSFULLY DELETED']);
         }
         else{
-            return Response()->json(['status'=>false,'message'=>'DATA FAILED TO CHANGE']);
+            return Response()->json(['status'=>false,'message'=>'DATA FAILED TO DELETED']);
         }
     }
     }
@@ -87,7 +87,7 @@ class JenisController extends Controller
     {
         if(Auth::user()->level=='admin'){
         $jenis  =jenis::all();
-        $jenis  = jenis::count();
+        $jenis1  = jenis::count();
         if($jenis){
             return Response()->json(['JUMLAH DATA'=>$jenis1,'DATA'=>$jenis,'status'=>true]);
         }

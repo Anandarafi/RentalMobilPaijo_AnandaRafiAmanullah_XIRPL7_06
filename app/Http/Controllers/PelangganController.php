@@ -13,11 +13,11 @@ class PelangganController extends Controller
 {
     //CEK LEVEL / POSISI PETUGAS
     public function cek(){
-        if(Auth::user()->level=='admin'){
+        if(Auth::user()->level=='admin' || 'ADMIN'){
             $petugas=DB::table('petugas')->get();
             return response()->json($petugas);
         }else{
-            return response()->json(['=== ANDA BUKAN ADMIN ===']);
+            return response()->json(['ANDA BUKAN ADMIN']);
         }
     }
 
@@ -95,8 +95,8 @@ class PelangganController extends Controller
     {
         if(Auth::user()->level=='admin'){
         $pelanggan=Pelanggan::all();
-        $pelanggan = Pelanggan::count();
-        if($Pelanggan){
+        $pelanggan1 = Pelanggan::count();
+        if($pelanggan){
             return Response()->json(['JUMLAH DATA'=>$pelanggan1,'DATA'=>$pelanggan,'status'=>true]);
         }
         else{
